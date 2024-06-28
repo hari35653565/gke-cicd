@@ -1,13 +1,13 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/eternal-petal-426611-m0/gke-repo/quickstart-image', './app1' ]
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/eternal-petal-426611-m0/gcf-artifacts/quickstart-image', './app1' ]
   id: 'Build Docker Image'
 
   # images:
   # - 'us-central1-docker.pkg.dev/eternal-petal-426611-m0/gke-repo/quickstart-image'
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-central1-docker.pkg.dev/eternal-petal-426611-m0/gke-repo/quickstart-image' ]
+  args: ['push', 'us-central1-docker.pkg.dev/eternal-petal-426611-m0/gcf-artifacts/quickstart-image' ]
   id: 'Push Docker Image'
 
 - name: 'google/cloud-sdk:latest'
